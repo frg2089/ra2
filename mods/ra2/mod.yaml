@@ -1,8 +1,9 @@
 Metadata:
-	Title: Red Alert 2
+	Title: mod-title
 	Description: The Soviet Union is back!\nThis time to conquer the United States...
 	Version: {DEV_VERSION}
 	Author: the RA2 mod team
+	WindowTitle: mod-windowtitle
 
 ModCredits:
 	ModTabTitle: Red Alert 2
@@ -14,6 +15,7 @@ FileSystem: ContentInstallerFileSystem
 	SystemPackages:
 		^EngineDir
 		$ra2: ra2
+		$ts: ts
 		^EngineDir|mods/common: common
 		~^SupportDir|Content/ra2: content
 	ContentInstallerMod: ra2-content
@@ -111,7 +113,7 @@ Chrome:
 Assemblies: OpenRA.Mods.Common.dll, OpenRA.Mods.Cnc.dll, OpenRA.Mods.RA2.dll
 
 ChromeLayout:
-	common|chrome/assetbrowser.yaml
+	ts|chrome/assetbrowser.yaml
 	ra2|chrome/ingame-player.yaml
 	common|chrome/mainmenu.yaml
 	common|chrome/mainmenu-prompts.yaml
@@ -203,7 +205,10 @@ FluentMessages:
 	common|fluent/chrome.ftl
 	common|fluent/hotkeys.ftl
 	common|fluent/rules.ftl
+	ra2|fluent/mod.ftl
 	ra2|fluent/rules.ftl
+
+AllowUnusedFluentMessagesInExternalPackages: false
 
 Hotkeys:
 	common|hotkeys/game.yaml
@@ -218,10 +223,10 @@ Hotkeys:
 
 LoadScreen: LogoStripeLoadScreen
 	Image: ra2|uibits/loadscreen.png
-	Text: Carving wooden nickels..., Preparing paratroopers..., Welcoming you to Texas..., Optimizing helium mix..., Receiving thoughts..., Igniting boosters...
 
 ServerTraits:
 	LobbyCommands
+	SkirmishLogic
 	PlayerPinger
 	MasterServerPinger
 	LobbySettingsNotification
