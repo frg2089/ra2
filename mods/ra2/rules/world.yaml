@@ -395,7 +395,7 @@ EditorWorld:
 				TerrainType: Gems
 				AllowedTerrainTypes: Clear, Rough, Road
 				MaxDensity: 12
-	EditorSelectionLayer:
+	MarkerLayerOverlay:
 	LoadWidgetAtGameStart:
 	EditorActionManager:
 	BuildableTerrainOverlay:
