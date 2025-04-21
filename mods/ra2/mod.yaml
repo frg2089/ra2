@@ -198,10 +198,12 @@ MapGrid:
 Music:
 	ra2|audio/music.yaml
 
-Translations:
-	common|languages/en.ftl
-	common|languages/rules/en.ftl
-	ra2|languages/rules/en.ftl
+FluentMessages:
+	common|fluent/common.ftl
+	common|fluent/chrome.ftl
+	common|fluent/hotkeys.ftl
+	common|fluent/rules.ftl
+	ra2|fluent/rules.ftl
 
 Hotkeys:
 	common|hotkeys/game.yaml
