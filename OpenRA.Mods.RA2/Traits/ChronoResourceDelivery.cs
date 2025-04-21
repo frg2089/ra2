@@ -16,7 +16,7 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.RA2.Traits
 {
 	[Desc("When returning to a refinery to deliver resources, this actor will teleport if possible.")]
-	public class ChronoResourceDeliveryInfo : TraitInfo, Requires<HarvesterInfo>
+	public sealed class ChronoResourceDeliveryInfo : TraitInfo, Requires<HarvesterInfo>
 	{
 		[Desc("The number of ticks between each check to see if we can teleport to the refinery.")]
 		public readonly int CheckTeleportDelay = 10;
@@ -45,7 +45,7 @@ namespace OpenRA.Mods.RA2.Traits
 		public override object Create(ActorInitializer init) { return new ChronoResourceDelivery(this); }
 	}
 
-	public class ChronoResourceDelivery : INotifyHarvestAction, ITick
+	public sealed class ChronoResourceDelivery : INotifyHarvestAction, ITick
 	{
 		readonly ChronoResourceDeliveryInfo info;
 

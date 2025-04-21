@@ -20,11 +20,12 @@ using FS = OpenRA.FileSystem.FileSystem;
 
 namespace OpenRA.Mods.Cnc.FileSystem
 {
-	public class AudioBagLoader : IPackageLoader
+	public sealed class AudioBagLoader : IPackageLoader
 	{
 		sealed class BagFile : IReadOnlyPackage
 		{
-			public string Name { get; private set; }
+			public string Name { get; }
+
 			public IEnumerable<string> Contents => index.Keys;
 
 			readonly Stream s;
