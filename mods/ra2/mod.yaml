@@ -10,42 +10,46 @@ ModCredits:
 
 PackageFormats: Mix, AudioBag
 
-Packages:
-	~^SupportDir|Content/ra2
-	^EngineDir
-	$ra2: ra2
-	^EngineDir|mods/common: common
-	~ra2.mix
-	~language.mix
-	~multi.mix
-	~audio.mix
-	~cache.mix
-	~cameo.mix
-	~conquer.mix: conquer
-	~generic.mix
-	~isogen.mix
-	~isosnow.mix
-	~isotemp.mix
-	~isourb.mix
-	~load.mix
-	~local.mix
-	~neutral.mix
-	~sidec01.mix
-	~sidec02.mix
-	~sno.mix
-	~snow.mix
-	~tem.mix
-	~temperat.mix
-	~theme.mix
-	~urb.mix
-	~urban.mix
-	~audio.bag
-	ra2|bits
-	ra2|bits/cameos
-	ra2|bits/structures
-	ra2|bits/animations
-	ra2|bits/projectiles
-	ra2|uibits
+FileSystem: ContentInstallerFileSystem
+	SystemPackages:
+		^EngineDir
+		$ra2: ra2
+		^EngineDir|mods/common: common
+		~^SupportDir|Content/ra2: content
+	ContentInstallerMod: ra2-content
+	ContentPackages:
+		ra2.mix
+		language.mix
+		multi.mix
+		audio.mix
+		cache.mix
+		cameo.mix
+		conquer.mix: conquer
+		generic.mix
+		isogen.mix
+		isosnow.mix
+		isotemp.mix
+		isourb.mix
+		load.mix
+		local.mix
+		neutral.mix
+		sidec01.mix
+		sidec02.mix
+		sno.mix
+		snow.mix
+		tem.mix
+		temperat.mix
+		urb.mix
+		urban.mix
+		audio.bag
+		~theme.mix
+		# Below are mod-provided (system) packages that need to be loaded after the content packages so they can override content assets.
+		ra2|bits
+		ra2|bits/cameos
+		ra2|bits/structures
+		ra2|bits/animations
+		ra2|bits/projectiles
+		ra2|uibits
 
 MapFolders:
 	ra2|maps: System
@@ -104,10 +108,7 @@ Cursors:
 Chrome:
 	ra2|chrome.yaml
 
-Assemblies:
-	^BinDir|OpenRA.Mods.Common.dll
-	^BinDir|OpenRA.Mods.Cnc.dll
-	^BinDir|OpenRA.Mods.RA2.dll
+Assemblies: OpenRA.Mods.Common.dll, OpenRA.Mods.Cnc.dll, OpenRA.Mods.RA2.dll
 
 ChromeLayout:
 	common|chrome/assetbrowser.yaml
