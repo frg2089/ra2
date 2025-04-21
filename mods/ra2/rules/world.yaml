@@ -4,6 +4,8 @@
 	MusicPlaylist:
 		VictoryMusic: score
 		DefeatMusic: score
+	VoxelCache:
+	ModelRenderer:
 	ActorMap:
 	ScreenMap:
 	TerrainGeometryOverlay:

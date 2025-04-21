@@ -287,8 +287,6 @@ SpriteSequenceFormat: TilesetSpecificSpriteSequence
 	TilesetSuffixes:
 		SNOW: a
 
-ModelSequenceFormat: VoxelModelSequence
-
 AssetBrowser:
 	SpriteExtensions: .shp, .tem, .urb, .sno
 	ModelExtensions: .vxl
