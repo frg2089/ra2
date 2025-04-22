@@ -205,7 +205,9 @@ FluentMessages:
 	common|fluent/chrome.ftl
 	common|fluent/hotkeys.ftl
 	common|fluent/rules.ftl
+	ra2|fluent/assetbrowser.ftl
 	ra2|fluent/chrome.ftl
+	ra2|fluent/hotkeys.ftl
 	ra2|fluent/mod.ftl
 	ra2|fluent/rules.ftl
 

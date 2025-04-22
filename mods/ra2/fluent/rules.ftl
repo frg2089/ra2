@@ -16,9 +16,6 @@ options-starting-units =
     .medium = Medium
     .heavy = Heavy
 
-options-difficulty =
-    .normal = Normal
-
 ## ai.yaml
 actor-player-modularbot-testai-name = Test AI
 
@@ -881,3 +878,5 @@ meta-baseworld =
     .faction-9-description =
     Russia
     Special Vehicle: Tesla Tank
+
+resource-minerals = Valuable Minerals
