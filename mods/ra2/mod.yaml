@@ -1,8 +1,6 @@
 Metadata:
 	Title: mod-title
-	Description: The Soviet Union is back!\nThis time to conquer the United States...
 	Version: {DEV_VERSION}
-	Author: the RA2 mod team
 	WindowTitle: mod-windowtitle
 
 ModCredits:
@@ -55,7 +53,7 @@ FileSystem: ContentInstallerFileSystem
 
 MapFolders:
 	ra2|maps: System
-	~^maps/ra2/{DEV_VERSION}: User
+	~^SupportDir|maps/ra2/{DEV_VERSION}: User
 
 Rules:
 	ra2|rules/proxy-actors.yaml
