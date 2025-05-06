@@ -20,7 +20,6 @@ FileSystem: ContentInstallerFileSystem
 	ContentPackages:
 		ra2.mix
 		language.mix
-		multi.mix
 		audio.mix
 		cache.mix
 		cameo.mix
