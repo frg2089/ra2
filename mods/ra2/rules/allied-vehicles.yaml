@@ -314,6 +314,7 @@ fv:
 	AutoTargetPriority@REPAIR:
 		RequiresCondition: ifv-repair
 		ValidTargets: Repair
+		ValidRelationships: Ally
 		InvalidTargets: NoAutoTarget
 	AutoTargetPriority@NOBUILDING:
 		RequiresCondition: ifv-deso
