@@ -44,11 +44,11 @@ Player:
 		ConstructionYardTypes: gacnst, nacnst
 		RefineryTypes: garefn, narefn
 		PowerTypes: gapowr, napowr, nanrct
-		BarracksTypes: gapile, nahand
-		VehiclesFactoryTypes: gaweap, naweap
 		ProductionTypes: gapile, nahand, gaweap, naweap, gaairc, amradr
+		TechTypes: garadr, naradr, gahpad, nahpad, gatech, natech
 		NavalProductionTypes: nayard, gayard
 		MaxBaseRadius: 50
+		SellRefineryNoResourceDistance: 18
 		BuildingLimits:
 			garefn: 4
 			narefn: 4
