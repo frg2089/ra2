@@ -1,4 +1,4 @@
-#region Copyright & License Information
+﻿#region Copyright & License Information
 /*
  * Copyright (c) The OpenRA Developers and Contributors
  * This file is part of OpenRA, which is free software. It is made
@@ -79,7 +79,7 @@ namespace OpenRA.Mods.RA2.Projectiles
 		readonly bool hasLaunchEffect;
 		readonly HashSet<(Color Color, WPos[] Offsets)> zaps;
 
-		[Sync]
+		[VerifySync]
 		readonly WPos target, source;
 
 		int ticks = 0;
@@ -117,7 +117,7 @@ namespace OpenRA.Mods.RA2.Projectiles
 					upVector = 1024 * upVector / upVector.Length;
 			}
 
-			zaps = new HashSet<(Color, WPos[])>();
+			zaps = [];
 			foreach (var c in colors)
 			{
 				var numSegments = (direction.Length - 1) / info.SegmentLength.Length + 1;

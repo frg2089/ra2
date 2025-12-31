@@ -1,4 +1,4 @@
-#region Copyright & License Information
+﻿#region Copyright & License Information
 /*
  * Copyright (c) The OpenRA Developers and Contributors
  * This file is part of OpenRA, which is free software. It is made
@@ -89,7 +89,7 @@ namespace OpenRA.Mods.RA2.Traits
 		WithSpriteBody[] wsbs;
 		TimedDeployState deployState;
 
-		[Sync]
+		[VerifySync]
 		int ticks;
 
 		public GrantTimedConditionOnDeploy(ActorInitializer init, GrantTimedConditionOnDeployInfo info)
