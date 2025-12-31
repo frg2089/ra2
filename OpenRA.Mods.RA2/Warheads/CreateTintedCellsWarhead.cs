@@ -1,4 +1,4 @@
-#region Copyright & License Information
+﻿#region Copyright & License Information
 /*
  * Copyright (c) The OpenRA Developers and Contributors
  * This file is part of OpenRA, which is free software. It is made
@@ -10,6 +10,7 @@
 #endregion
 
 using System;
+using System.Collections.Immutable;
 using System.Linq;
 using OpenRA.GameRules;
 using OpenRA.Mods.Common.Traits;
@@ -66,7 +67,7 @@ namespace OpenRA.Mods.RA2.Warheads
 				var devMode = world.LocalPlayer.PlayerActor.TraitOrDefault<DebugVisualizations>();
 				if (devMode != null && devMode.CombatGeometry)
 				{
-					var range = Exts.MakeArray(Range.Length, i => WDist.FromCells(Range[i].Length));
+					var range = Exts.MakeArray(Range.Length, i => WDist.FromCells(Range[i].Length)).ToImmutableArray();
 					world.WorldActor.Trait<WarheadDebugOverlay>().AddImpact(pos, range, DebugOverlayColor);
 				}
 			}
