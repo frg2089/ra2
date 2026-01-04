@@ -58,8 +58,8 @@ rallypoint:
 beacon:
 	idle:
 		Filename: pbeacon.shp
-		Length: 20
-		Tick: 200
+		Length: 10
+		Tick: 30
 		ZOffset: 2047
 	arrow:
 		Filename: pbeacon.shp
